@@ -64,7 +64,7 @@ const UserInfo = () => {
           </p>
         </div>
 
-        <div className="lg:ml-12 sm:-ml-20 ">
+        <div className="lg:right-1/4 mr-20 absolute  sm:ml-96   ">
           <button
             onClick={follow}
             className="px-5 flex py-2 w-16 rounded-3xl bg-blue-600  justify-center text-white  hover:bg-blue-800  transition duration-300 ease-in-out"
