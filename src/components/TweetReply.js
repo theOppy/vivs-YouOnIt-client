@@ -4,7 +4,7 @@ import "../index.css";
 import { Link } from "react-router-dom";
 
 const TweetReply = () => {
-  const tweetID = window.location.href.slice(28, 70);
+  const tweetID = window.location.href.slice(38, 70);
 
   const [tweet, setTweet] = React.useState({});
 
