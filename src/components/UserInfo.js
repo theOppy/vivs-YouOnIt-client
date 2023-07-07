@@ -10,7 +10,7 @@ const UserInfo = () => {
   const [following, setFollowing] = React.useState(0);
   const [isFollowed, setIsFollowed] = React.useState(false);
 
-  const followID = window.location.href.slice(27, 70);
+  const followID = window.location.href.slice(38, 70);
 
   const userID = getUserID();
 
