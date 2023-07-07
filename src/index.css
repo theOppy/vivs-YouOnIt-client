@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.width {
+    border-top-width: 22px;
+    border-color: black;
+}
+
+
+.width-bottom {
+    border-bottom: 20px;
+    border-color: black;
+}
+
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+.notBlur {
+    filter: blur(0);
+    
+}
