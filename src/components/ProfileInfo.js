@@ -79,7 +79,7 @@ const ProfileInfo = () => {
               @{userData.username}
             </p>
           </div>
-          <div className="flex justify-end bottom-10 sm:mx-2 lg:mx-6 sm:right-6 lg:right-8 relative ">
+          <div className="flex justify-end bottom-10 sm:mx-2 lg:mx-6 sm:right-2 lg:right-8 relative ">
             <button
               className="px-3 rounded-2xl py-2  border-1 border-blue-500 hover:bg-blue-500 text-white font-bold text-sm translate duration-300 ease-in-out  hover:text-black"
               onClick={setting}
