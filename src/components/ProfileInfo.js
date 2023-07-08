@@ -68,7 +68,7 @@ const ProfileInfo = () => {
           />
         </div>
 
-        <div className="flex flex-col mt-3 ml-5">
+        <div className="flex flex-col lg:mt-3 sm:mt-0 ml-5">
           <div className="flex">
             <p className="text-white flex font-bold text-2xl">
               {userData.name}
@@ -78,7 +78,7 @@ const ProfileInfo = () => {
             @{userData.username}
           </p>
         </div>
-        <div className="flex justify-end bottom-10  sm:right-28 lg:right-8 relative ">
+        <div className="flex justify-end bottom-10  sm:right-11 lg:right-8 relative ">
           <button
             className="px-3 rounded-2xl py-2  border-1 border-blue-500 hover:bg-blue-500 text-white font-bold text-sm translate duration-300 ease-in-out  hover:text-black"
             onClick={setting}
