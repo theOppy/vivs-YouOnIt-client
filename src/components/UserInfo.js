@@ -56,7 +56,7 @@ const UserInfo = () => {
         />
       </div>
 
-      <div className="flex  mt-3 ml-5 gap-96 ">
+      <div className="flex sm:mx-2 lg:mx-6 mt-3 ml-5 gap-96 ">
         <div>
           <p className="text-white  font-bold text-3xl ">{userData.name}</p>
           <p className="text-sm flex items-center font-light text-neutral-100 opacity-40">
@@ -64,7 +64,7 @@ const UserInfo = () => {
           </p>
         </div>
       </div>
-      <div className="lg:right-1/4 flex justify-end  sm:mr-10   ">
+      <div className="lg:right-1/4  flex justify-end  sm:mr-10   ">
         <button
           onClick={follow}
           className="px-5 flex py-2 w-16 rounded-3xl bg-blue-600  justify-center text-white  hover:bg-blue-800  transition duration-300 ease-in-out"
@@ -72,11 +72,11 @@ const UserInfo = () => {
           {isFollowed ? "Unfollow" : "Follow"}
         </button>
       </div>
-      <div className="flex ml-6 mb-2 mt-0">
+      <div className="flex ml-6 sm:mx-2 lg:mx-6 mb-2 mt-0">
         <p className="text-gray-100  font-light ">{userData.bio}</p>
       </div>
 
-      <div className="flex lg:gap-8 sm:gap-4 ml-5 my-2 mt-3">
+      <div className="flex lg:gap-8 sm:gap-4 sm:mx-2 lg:mx-6 ml-5 my-2 mt-3">
         <div className="flex items-center">
           <img
             src="https://icon-library.com/images/location-icon-white-png/location-icon-white-png-12.jpg"
@@ -87,7 +87,7 @@ const UserInfo = () => {
             {userData.location}
           </p>
         </div>
-        <div className="flex items-center">
+        <div className="flex  items-center">
           <img
             src="https://img.icons8.com/?size=512&id=geb584jjXHjX&format=png"
             alt="work icon png"
@@ -97,7 +97,7 @@ const UserInfo = () => {
             {userData.occupation}
           </p>
         </div>
-        <div className="flex items-center">
+        <div className="flex sm:mx-3 lg:mx-6 items-center">
           {userData.bod && (
             <p className=" text-sm flex items-center text-neutral-100 opacity-40">
               Born {userData.bod}
@@ -105,7 +105,7 @@ const UserInfo = () => {
           )}
         </div>
       </div>
-      <div className="flex text-white mt-3 font-medium gap-4 text-xl ml-5  items-center">
+      <div className="flex sm:mx-2 lg:mx-6 text-white mt-3 font-medium gap-4 text-xl ml-5  items-center">
         <p>
           {followers}{" "}
           <span className="text-sm    opacity-40 text-neutral-100">
