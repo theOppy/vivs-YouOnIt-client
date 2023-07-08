@@ -78,7 +78,7 @@ const ProfileInfo = () => {
             @{userData.username}
           </p>
         </div>
-        <div className="flex justify-end bottom-10 right-8 relative ">
+        <div className="flex justify-end bottom-10  sm:right-28 lg:right-8 relative ">
           <button
             className="px-3 rounded-2xl py-2  border-1 border-blue-500 hover:bg-blue-500 text-white font-bold text-sm translate duration-300 ease-in-out  hover:text-black"
             onClick={setting}
@@ -89,14 +89,14 @@ const ProfileInfo = () => {
         <div className="flex ml-6 mb-3 -mt-2">
           <p className="text-gray-100  font-light ">{userData.bio}</p>
         </div>
-        <div className="flex gap-8 ml-5 mt-2 my-2">
+        <div className="flex lg:gap-8 sm:gap-4 ml-5 mt-2 my-2">
           <div className="flex items-center">
             <img
               src="https://icon-library.com/images/location-icon-white-png/location-icon-white-png-12.jpg"
               alt="location png icon"
               className="h-5 w-5 mr-1 opacity-40 text-white"
             />
-            <p className=" text-sm flex items-center text-neutral-100 opacity-40">
+            <p className=" lg:text-sm sm:text-xs flex items-center text-neutral-100 opacity-40">
               {userData.location}
             </p>
           </div>
@@ -106,12 +106,12 @@ const ProfileInfo = () => {
               alt="work icon png"
               className="h-5 opacity-40 w-5 mr-1 items-center mb-1 text-white"
             />
-            <p className=" text-sm flex items-center text-neutral-100 opacity-40">
+            <p className=" lg:text-sm sm:text-xs flex items-center text-neutral-100 opacity-40">
               {userData.occupation}
             </p>
           </div>
           <div className="flex items-center">
-            <p className=" text-sm flex items-center text-neutral-100 opacity-40">
+            <p className=" lg:text-sm sm:text-xs flex items-center text-neutral-100 opacity-40">
               Born {"  "}
               {userData.dob}
             </p>
