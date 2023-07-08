@@ -36,7 +36,7 @@ const UserTweets = ({ userID }) => {
           className="flex flex-col mt-2 m-3  py-2 px-2  rounded-md shadow-inner shadow-black bg-blue-950 bg-opacity-20 "
           key={data._id}
         >
-          <div className="flex   items-center">
+          <div className="flex items-center">
             <img
               src={`https://vivs-youonit-server.onrender.com/${data.file}`}
               className="w-8 h-8 ml-3 mt-3 mr-3 "
@@ -56,7 +56,7 @@ const UserTweets = ({ userID }) => {
 
               <img
                 src="https://cdn-icons-png.flaticon.com/512/995/995039.png"
-                className="h-4 w-4 ml-72  cursor-cell"
+                className="h-4 w-4 lg:ml-72 sm:ml-48  cursor-cell"
                 onClick={() => deleteTweets(data._id)}
                 alt="delete"
               />
