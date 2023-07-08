@@ -63,28 +63,27 @@ const UserInfo = () => {
             @{userData.username}
           </p>
         </div>
-
-        <div className="lg:right-1/4 mr-20 absolute  sm:ml-96   ">
-          <button
-            onClick={follow}
-            className="px-5 flex py-2 w-16 rounded-3xl bg-blue-600  justify-center text-white  hover:bg-blue-800  transition duration-300 ease-in-out"
-          >
-            {isFollowed ? "Unfollow" : "Follow"}
-          </button>
-        </div>
       </div>
-      <div className="flex ml-6 mb-2 mt-4">
+      <div className="lg:right-1/4 flex justify-end  sm:mr-10   ">
+        <button
+          onClick={follow}
+          className="px-5 flex py-2 w-16 rounded-3xl bg-blue-600  justify-center text-white  hover:bg-blue-800  transition duration-300 ease-in-out"
+        >
+          {isFollowed ? "Unfollow" : "Follow"}
+        </button>
+      </div>
+      <div className="flex ml-6 mb-2 mt-0">
         <p className="text-gray-100  font-light ">{userData.bio}</p>
       </div>
 
-      <div className="flex gap-8 ml-5 my-2 mt-3">
+      <div className="flex lg:gap-8 sm:gap-4 ml-5 my-2 mt-3">
         <div className="flex items-center">
           <img
             src="https://icon-library.com/images/location-icon-white-png/location-icon-white-png-12.jpg"
             alt="location png icon"
             className="h-5 w-5 mr-2 opacity-40 text-white"
           />
-          <p className=" text-sm flex items-center text-neutral-100 opacity-40">
+          <p className=" lg:text-sm sm:text-xs flex items-center text-neutral-100 opacity-40">
             {userData.location}
           </p>
         </div>
@@ -94,7 +93,7 @@ const UserInfo = () => {
             alt="work icon png"
             className="h-5 opacity-40 w-5 mr-2 mb-1 items-center text-white"
           />
-          <p className=" text-sm flex items-center text-neutral-100 opacity-40">
+          <p className=" lg:text-sm sm:text-xs flex items-center text-neutral-100 opacity-40">
             {userData.occupation}
           </p>
         </div>
