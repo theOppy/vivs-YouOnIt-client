@@ -64,7 +64,7 @@ const ProfileInfo = () => {
           <img
             src={`https://vivs-youonit-server.onrender.com/${userData.file}`}
             alt="profile pic"
-            className="lg:w-32 sm:w-28 rounded-full border-slate-950 border-4   lg:h-32 sm:h-28 bottom-16 left-6 relative"
+            className="lg:w-32 sm:w-28 rounded-full border-slate-950 border-4   lg:h-32 sm:h-28 lg:bottom-16 sm:bottom-14 lg:left-6 sm:left-2 relative"
           />
         </div>
 
@@ -147,4 +147,3 @@ const ProfileInfo = () => {
 };
 
 export default ProfileInfo;
-
