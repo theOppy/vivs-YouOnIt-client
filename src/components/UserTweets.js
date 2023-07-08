@@ -39,7 +39,7 @@ const UserTweets = ({ userID }) => {
           <div className="flex items-center">
             <img
               src={`https://vivs-youonit-server.onrender.com/${data.file}`}
-              className="w-8 h-8 ml-3 mt-3 mr-3 "
+              className="w-8 h-8 ml-3  mt-3 mr-3 "
               alt="Avtar"
             />
             <p className="font-semibold text-base capitalize mt-3 mr-3 text-white">
@@ -53,13 +53,6 @@ const UserTweets = ({ userID }) => {
                 {" "}
                 {data.date.slice(0, 7)}
               </div>
-
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/995/995039.png"
-                className="h-4 w-4 lg:ml-72 sm:ml-36  cursor-cell"
-                onClick={() => deleteTweets(data._id)}
-                alt="delete"
-              />
             </div>
           </div>
           <div className=" ">
