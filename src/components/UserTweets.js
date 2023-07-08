@@ -56,7 +56,7 @@ const UserTweets = ({ userID }) => {
 
               <img
                 src="https://cdn-icons-png.flaticon.com/512/995/995039.png"
-                className="h-4 w-4 lg:ml-72 sm:ml-48  cursor-cell"
+                className="h-4 w-4 lg:ml-72 sm:ml-36  cursor-cell"
                 onClick={() => deleteTweets(data._id)}
                 alt="delete"
               />
