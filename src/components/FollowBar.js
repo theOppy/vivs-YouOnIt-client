@@ -5,6 +5,7 @@ import "../index.css";
 
 const FollowBar = () => {
   const [users, setUsers] = React.useState([]);
+  const defaultImage = "https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000"
 
   React.useEffect(() => {
     (async () => {
@@ -23,31 +24,23 @@ const FollowBar = () => {
       return (
         <div className="flex flex-col overflow-y-scroll">
           <Link to={`/user/${users._id}`}>
-            <div className="border-2 flex border-blue-700 border-opacity-30 justify-between mx-3 my-2 p-3 hover:bg-blue-800 hover:bg-opacity-20">
-              <div className="flex flex-col text-white justify-center ">
-                <p className="font-bold  text-white">Check Out</p>
-                <p className="text-blue-600 text-3xl  font-bold  ">
-                  @{users.username}
-                </p>
+            <div className="border-2 flex overflow-hidden border-blue-700 border-opacity-30 justify-between items-start mx-3 my-2 px-3 py-4 hover:bg-blue-800 hover:bg-opacity-20">
+              <div className="flex flex-col justify-center items-start">
+                <p className="text-white text-xl">Check out</p>
+                <p className="text-2xl font-bold text-blue-600 truncate w-full">@{users.username}</p>
               </div>
-
               <div>
                 <img
                   src={
                     `https://vivs-youonit-server.onrender.com/${users.file}` ||
-                    "https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000"
+                    defaultImage
                   }
                   alt="pfp"
-                  className="h-14 w-14  rounded-full  ml-4"
+                  className="h-12 w-12 object-contain  rounded-full  ml-4"
                 />
-                <p className="text-lg font-light text-white mt-1  opacity-70">
-                  <span className="font-semibold text-xl ">
-                    {" "}
-                    {users.followers.length}
-                  </span>{" "}
-                  followers
-                </p>
               </div>
+
+
             </div>
           </Link>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import OtherUserTweets from "./OtherUserTweets";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getUserID } from "../hooks/getUserID";
 
 const UserInfo = () => {
@@ -11,10 +12,16 @@ const UserInfo = () => {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
   const followID = window.location.href.slice(27, 70);
+  const navigate = useNavigate();
+
 
   const userID = getUserID();
 
   React.useEffect(() => {
+
+    if (followID === userID) {
+      navigate(`/profile/${userID}`)
+    }
     (async () => {
       const result = await axios.get(
         `https://vivs-youonit-server.onrender.com/otheruser/${followID}`
@@ -24,7 +31,7 @@ const UserInfo = () => {
       setFollowers(followers.length);
       setFollowing(following.length);
     })();
-  }, [followID]);
+  }, [followID, navigate, userID]);
 
   const follow = async () => {
     setIsFollowed(!isFollowed);

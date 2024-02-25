@@ -5,13 +5,15 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [_, setCookies] = useCookies("access_token");
   const navigate = useNavigate();
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    setIsLoading(true)
     try {
       const result = await axios.post(
         "https://vivs-youonit-server.onrender.com/login",
@@ -25,6 +27,8 @@ const Login = () => {
       navigate("/home");
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false)
     }
   };
 
@@ -64,7 +68,7 @@ const Login = () => {
               type="submit"
               className=" mt-1 mb-1 px-11 py-2.5 text-lg rounded-full font-black transition ease-in-out delay-75 bg-blue-500 hover:bg-blue-800   duration-150"
             >
-              Sign in
+              {!isLoading ? "Login" : "Loading..."}
             </button>
           </div>
           <div>

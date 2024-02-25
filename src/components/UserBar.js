@@ -21,9 +21,8 @@ const UserBar = () => {
 
   return (
     <div
-      className={`${
-        userData.occupation ? "h-5/6" : "h-2/6"
-      } w-screen  flex-col flex justify-between `}
+      className={`${userData.occupation ? "h-5/6" : "h-2/6"
+        } w-zz  flex-col flex justify-between `}
     >
       <div className="h-1/6 flex items-center mt-8">
         <img
